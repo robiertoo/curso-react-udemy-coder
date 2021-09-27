@@ -6,7 +6,7 @@ Repositório destinado a documentar o progresso neste curso da [Cod3r](https://w
 ## Os módulos são: 
 1. ~~Introdução~~
 2. ~~Fundamentos React~~
-3. Projeto Calculadora
+3.~~Projeto Calculadora~~
 4. Navegação com React Router
 5. React Hooks
 6. Projeto Cadastro - Integração com Banco de Dados (Firestore)
