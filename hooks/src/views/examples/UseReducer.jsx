@@ -1,23 +1,9 @@
 import React from 'react'
 import { useReducer } from 'react/cjs/react.development'
 import PageTitle from '../../components/layout/PageTitle'
-
-const initialState = {
-    other: '...',
-    user: null,
-    number: 0,
-}
-
-function reducer(state, action) {
-    switch (action.type) {
-        case 'numberAdd2':
-            return { ...state, number: state.number + 2 }
-        case 'login':
-            return { ...state, user: { name: action.payload } }
-        default:
-            return state
-    }
-}
+import { initialState, reducer } from '../../store'
+import { login } from '../../store/actions'
+import { numberAdd2 } from '../../store/actions/number';
 
 const UseReducer = (props) => {
     const[state, dispatch] = useReducer(reducer, initialState)
@@ -40,15 +26,35 @@ const UseReducer = (props) => {
                 </span>
                 <div>
                     <button className="btn" onClick={
-                        () => dispatch({ type: 'login', payload: 'Maryane' })
+                        () => login(dispatch, 'Maryane')
                     }>
                         Login
                     </button>
 
                     <button className="btn" onClick={
-                        () => dispatch({ type: 'numberAdd2' })
+                        () => numberAdd2(dispatch)
                     }>
                         +2
+                    </button>
+                    <button className="btn" onClick={
+                        () => dispatch({ type: 'multiplyNumberBy7' })
+                    }>
+                        * 7
+                    </button>
+                    <button className="btn" onClick={
+                        () => dispatch({ type: 'divideNumberBy25' })
+                    }>
+                        / 25
+                    </button>
+                    <button className="btn" onClick={
+                        () => dispatch({ type: 'convertNumberToInteger' })
+                    }>
+                        Inteiro
+                    </button>
+                    <button className="btn" onClick={
+                        () => dispatch({ type: 'addNToNumber', payload: 5 })
+                    }>
+                        Adicionar N
                     </button>
                 </div>
             </div>
