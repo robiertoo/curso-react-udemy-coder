@@ -8,7 +8,7 @@ Repositório destinado a documentar o progresso neste curso da [Cod3r](https://w
 2. ~~Fundamentos React~~
 3. ~~Projeto Calculadora~~
 4. ~~Navegação com React Router~~
-5. React Hooks
+5. ~~React Hooks~~
 6. Projeto Cadastro - Integração com Banco de Dados (Firestore)
 7. TodoApp (Backend)
 8. TodoApp (Frontend)
